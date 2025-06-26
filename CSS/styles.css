@@ -156,3 +156,49 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
+  max-width: 1000px;
+  margin: 0rem auto;
+  padding: 0 0rem;
+}
+
+.left-column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.quote-box {
+  background-color: #e8d8d8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #7b1113;
+  text-align: center;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #7b1113;
+}
+
+.right-column {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
