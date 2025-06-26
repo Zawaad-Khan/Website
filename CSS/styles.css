@@ -1,24 +1,20 @@
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
-  background: #f9f9f9;
+  background: #fff;
   color: #111;
 }
 
 .topbar {
   background: #fff;
   padding: 1.3rem 0;
-  text-align: center;
-  border-bottom: 1px solid #d6d6d6;
-  position: sticky;
-  top: 0;
-  z-index: 1001;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .site-title {
   font-family: Georgia, serif;
   font-size: 1.65rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #000;
   text-decoration: none;
 }
@@ -34,10 +30,7 @@ body {
   gap: 1rem;
   padding: 0.85rem 0;
   background: #fff;
-  border-bottom: 1px solid #d6d6d6;
-  position: sticky;
-  top: 3.8rem;
-  z-index: 1000;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .navbar a {
@@ -88,4 +81,62 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2000;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+#side-menu.hidden {
+  transform: translateX(-100%);
+}
+
+#side-menu a {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  transition: color 0.2s ease;
+}
+
+#side-menu a:hover {
+  color: #7b1113;
+}
+
+
+.hidden {
+  display: none;
+}
+.close-menu {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  color: #000;
 }
