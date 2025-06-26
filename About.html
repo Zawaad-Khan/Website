@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
-  <link rel="stylesheet" href="CSS/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="Javascript/index.js" defer></script>
 </head>
 <body>
   <header class="topbar">
-  <div class="topbar-content">
-    <a href="index.html" class="site-title">Zawaad Khan</a>
-    <a href="https://zawaadkhan.substack.com/" class="substack-btn" target="_blank">Substack</a>
-  </div>
-</header>
+    <div class="topbar-content">
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <a href="index.html" class="site-title">Zawaad Khan</a>
+      <a href="https://zawaadkhan.substack.com/" class="substack-btn" target="_blank">Substack</a>
+    </div>
+  </header>
 
   <nav class="navbar">
     <a href="Publications.html">Publications</a>
@@ -21,8 +23,14 @@
     <a href="About.html">About</a>
   </nav>
 
-  <main>
-    <!-- Page-specific content here -->
-  </main>
+  <div id="side-menu" class="side-menu hidden">
+    <span class="close-menu" onclick="toggleMenu()">×</span>
+    <a href="Publications.html">Publications</a>
+    <a href="Philanthropy.html">Philanthropy</a>
+    <a href="Initiatives.html">Initiatives</a>
+    <a href="About.html">About</a>
+  </div>
+
+  <main></main>
 </body>
 </html>
