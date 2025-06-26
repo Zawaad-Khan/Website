@@ -162,14 +162,14 @@ body::-webkit-scrollbar-thumb:hover {
   gap: 0.5rem;
   max-width: 1000px;
   margin: 0rem auto;
-  padding: 0 0rem;
+  padding: 0 1rem;
 }
 
 .left-column {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  margin-top: 4rem;
+  justify-content: right;
+  margin-top: 1rem;
 }
 
 .quote-box {
@@ -192,7 +192,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .right-column {
   background: #fff;
-  border-radius: 6px;
+  border-radius: 0px;
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
