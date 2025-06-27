@@ -76,11 +76,11 @@ body {
   text-decoration: none;
   font-weight: 400;
   font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-  text-decoration: none;
-  color: inherit;
+  color: #7b1113;
 }
 
 main {
@@ -137,7 +137,6 @@ main {
   color: #555;
 }
 
-
 /* Scrollbar style */
 body::-webkit-scrollbar {
   width: 8px;
@@ -156,21 +155,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 0.5rem;
-  max-width: 1000px;
-  margin: 0rem auto;
-  padding: 0 1rem;
-}
 
-.left-column {
-  display: flex;
-  align-items: flex-start;
-  justify-content: right;
-  margin-top: 0.75rem;
-}
+/* Removed: .two-column, .left-column */
 
 .quote-box {
   background-color: #e8d8d8;
@@ -181,6 +167,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-align: center;
   font-weight: 400;
   max-width: 90%;
+  margin: 0 auto 2rem;
 }
 
 .quote-author {
@@ -190,31 +177,10 @@ body::-webkit-scrollbar-thumb:hover {
   color: #7b1113;
 }
 
-.right-column {
-  background: #fff;
-  border-radius: 0px;
-  padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
+/* Removed or repurposed .right-column */
 
-.section-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.navbar a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-}
-
-.navbar a:hover {
-  color: #7b1113;
-}
 .site-footer {
-  background-color: #e5e5e5; /* matches Substack button */
+  background-color: #e5e5e5;
   text-align: center;
   padding: 2rem 1rem 1rem;
   font-size: 0.95rem;
@@ -250,6 +216,7 @@ body::-webkit-scrollbar-thumb:hover {
 .footer-links a:hover {
   color: #555;
 }
+
 @media (max-width: 768px) {
   .navbar,
   .substack-btn {
@@ -259,4 +226,8 @@ body::-webkit-scrollbar-thumb:hover {
   .topbar-content {
     justify-content: flex-start;
   }
+}
+.substack-post-embed {
+  max-width: 700px;
+  margin: 2rem auto;
 }
