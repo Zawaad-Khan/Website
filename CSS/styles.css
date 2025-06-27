@@ -202,3 +202,51 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #7b1113;
+}
+.site-footer {
+  background-color: #e5e5e5; /* matches Substack button */
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.footer-socials {
+  margin-bottom: 2rem;
+}
+
+.footer-socials a {
+  color: #000;
+  margin: 0 0.75rem;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #555;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #000;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #555;
+}
