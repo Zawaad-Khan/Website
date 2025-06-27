@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .site-footer {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   text-align: center;
   padding: 2rem 1rem 1rem;
   font-size: 0.95rem;
@@ -183,17 +183,6 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 1rem;
 }
 
-.footer-links a {
-  color: #000;
-  margin: 0 1rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #555;
-}
-
 @media (max-width: 768px) {
   .navbar,
   .substack-btn {
@@ -207,4 +196,73 @@ body::-webkit-scrollbar-thumb:hover {
 .substack-post-embed {
   max-width: 700px;
   margin: 2rem auto;
+}
+.featured-essays {
+  background: #e5e5e5;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #000000;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom:2rem;
+}
+
+.section-desc {
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.essay-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.essay-card {
+  flex: 1 1 300px;
+  max-width: 360px;
+  padding: 1rem;
+  background: #ffffff;
+  border-left: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.essay-card h3 {
+  font-size: 1.1rem;
+  color: #000000;
+  margin: 0 0 0.5rem;
+}
+
+.essay-card p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  color: #444;
+}
+
+.essay-date {
+  font-style: italic;
+  color: #777;
+}
+
+.essay-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.essay-card a:hover h3 {
+  text-decoration: none;
+  color: #900;
 }
