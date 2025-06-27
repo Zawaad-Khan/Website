@@ -250,3 +250,13 @@ body::-webkit-scrollbar-thumb:hover {
 .footer-links a:hover {
   color: #555;
 }
+@media (max-width: 768px) {
+  .navbar,
+  .substack-btn {
+    display: none;
+  }
+
+  .topbar-content {
+    justify-content: flex-start;
+  }
+}
