@@ -93,35 +93,45 @@ main {
 }
 
 .side-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 64px;
+  left: 1rem;
   width: 260px;
-  height: 100%;
-  background: #ffffff;
-  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
-  padding: 1.5rem 1.25rem;
+  background: #1e1e1e;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  z-index: 999;
-  transition: transform 0.3s ease;
+  gap: 0.75rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.side-menu.hidden {
-  transform: translateX(-100%);
+.side-menu.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
+
 
 .side-menu a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: #fff;
   text-decoration: none;
-  transition: color 0.2s;
+  background: #2e2e2e;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: background 0.2s ease;
 }
 
 .side-menu a:hover {
-  color: #000;
+  background: #3e3e3e;
 }
 
 .close-menu {
