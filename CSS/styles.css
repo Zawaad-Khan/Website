@@ -244,7 +244,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex: 1 1 300px;
   max-width: 360px;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.395);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
