@@ -80,7 +80,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #7b1113;
+  color: #002855;
 }
 
 main {
@@ -234,15 +234,22 @@ body::-webkit-scrollbar-thumb:hover {
   flex: 1 1 300px;
   max-width: 360px;
   padding: 1rem;
-  background: #ffffff;
-  border-left: 2px solid #ccc;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.essay-card:hover {
+  transform: translateY(-4px);
 }
 
 .essay-card h3 {
   font-size: 1.1rem;
-  color: #000000;
+  color: #002855;
   margin: 0 0 0.5rem;
 }
 
@@ -264,5 +271,19 @@ body::-webkit-scrollbar-thumb:hover {
 
 .essay-card a:hover h3 {
   text-decoration: none;
-  color: #900;
+  color: #000000;
+}
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
