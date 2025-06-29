@@ -249,7 +249,23 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .topbar-content {
-    justify-content: flex-start;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .site-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 
   .footer-container {
@@ -262,6 +278,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-top: 2rem;
   }
 }
+
 
 .substack-post-embed {
   max-width: 700px;
