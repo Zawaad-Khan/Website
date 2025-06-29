@@ -365,3 +365,23 @@ body::-webkit-scrollbar-thumb:hover {
     margin-top: 2rem;
   }
 }
+.custom-btn {
+  position: absolute;
+  right: 8rem; /* offset to the left of substack button */
+  background-color: #e5e5e5;
+  color: #000;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2rem;
+  transition: background-color 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #bababa;
+}
