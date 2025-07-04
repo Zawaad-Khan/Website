@@ -1,59 +1,67 @@
 /* Define CSS Variables for consistent colors and spacing */
 :root {
     --site-max-width: 900px;
-    --red-accent: #e60000; /* Red accent color for links, titles, and icons */
-    --dark-text-color: #000000; /* Black for primary text */
-    --light-grey-text: #555555; /* Slightly darker grey for secondary text/meta info for better contrast on white */
-    --page-bg-color: #FFFFFF; /* ALL BACKGROUNDS NOW PURE WHITE */
-    --header-top-bar-bg: #FFFFFF; /* ALL BACKGROUNDS NOW PURE WHITE */
-    --white-bg-card: #FFFFFF; /* Already white, remains white */
+    --red-accent: #7b1113;
+    --dark-text-color: #000000;
+    --light-grey-text: #555555;
+    --page-bg-color: #FFFFFF;
+    --header-top-bar-bg: #FFFFFF;
+    --white-bg-card: #FFFFFF;
+    --featured-insights-bg: #F8F8F8;
+    --border-color: #D3D3D3; /* Greyish color for borders, a light grey */
+    --content-horizontal-padding: 2rem; /* Consistent horizontal padding for main containers */
+    --column-inner-horizontal-padding: 1.5rem; /* New variable for consistent inner padding of columns/cards */
 }
 
 /* General Body & Typography */
 body {
-    /* Apple website font (system font stack) */
-    font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     margin: 0;
-    background: var(--page-bg-color); /* Now white */
+    background: var(--page-bg-color);
     color: var(--dark-text-color);
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Serif JP', serif; /* Based on font link in HTML */
+    font-family: 'Noto Serif JP', serif;
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em; /* Consistent bottom margin for headings */
     color: var(--dark-text-color);
+    text-align: left; /* Ensure headings are left-aligned */
+}
+
+p {
+    margin-bottom: 1em; /* Consistent bottom margin for paragraphs */
+    text-align: left; /* Ensure paragraphs are left-aligned */
 }
 
 a {
     text-decoration: none;
-    color: var(--dark-text-color); /* Default links are black */
+    color: var(--dark-text-color);
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: var(--red-accent); /* Red accent on hover */
+    color: var(--red-accent);
 }
 
-/* Optional: Prevent body scroll when menu is open */
 body.no-scroll {
     overflow: hidden;
 }
 
 /* --- SITE HEADER (Top Bar + Main Nav) --- */
 .site-header-wrapper {
-    background-color: var(--header-top-bar-bg); /* Now white */
+    background-color: var(--header-top-bar-bg);
     padding-top: 10px;
-    color: var(--dark-text-color); /* Text color remains dark */
+    color: var(--dark-text-color);
     border-bottom: none;
 }
 
 .site-header {
-    background-color: var(--page-bg-color); /* Now white */
+    background-color: var(--page-bg-color);
     max-width: var(--site-max-width);
     margin: 0 auto;
-    padding: 0 2rem 0.5rem;
+    padding: 0 var(--content-horizontal-padding) 0.5rem;
     box-sizing: border-box;
 }
 
@@ -65,15 +73,15 @@ body.no-scroll {
 }
 
 .site-name {
-    font-family: 'Noto Serif JP', serif; /* Based on font link in HTML */
+    font-family: 'Noto Serif JP', serif;
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--dark-text-color); /* Dark color on white background */
+    color: var(--dark-text-color);
     text-decoration: none;
 }
 
 .site-name:hover {
-    color: var(--red-accent); /* Red accent on hover */
+    color: var(--red-accent);
 }
 
 .header-utility-icons {
@@ -83,13 +91,13 @@ body.no-scroll {
 }
 
 .header-utility-icons a {
-    color: var(--red-accent); /* Red for utility icons */
+    color: var(--red-accent);
     font-size: 1.1rem;
     transition: color 0.2s ease;
 }
 
 .header-utility-icons a:hover {
-    color: var(--light-grey-text); /* Light grey on hover for contrast */
+    color: var(--light-grey-text);
 }
 
 /* Main Desktop Navigation */
@@ -104,20 +112,21 @@ body.no-scroll {
     margin: 0;
     display: flex;
     justify-content: flex-start;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .main-nav ul li a {
-    color: var(--light-grey-text); /* Light grey for navigation links */
-    font-size: 0.9rem;
+    color: var(--light-grey-text);
+    font-size: 0.8rem;
     font-weight: 400;
     text-decoration: none;
-    padding: 0.5rem 0;
-    text-transform: uppercase;
+    padding: 0.2rem 0;
+    text-transform: none;
+    letter-spacing: 0.2px;
 }
 
 .main-nav ul li a:hover {
-    color: var(--red-accent); /* Red accent on hover */
+    color: var(--red-accent);
 }
 
 /* Optional: Active link indicator for main nav (requires JS for active state) */
@@ -129,7 +138,7 @@ body.no-scroll {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--red-accent); /* Red accent underline */
+    background-color: var(--red-accent);
 }
 
 /* Hamburger Menu Toggle (Initially hidden for desktop) */
@@ -147,7 +156,7 @@ body.no-scroll {
     display: block;
     width: 28px;
     height: 28px;
-    color: var(--dark-text-color); /* Dark icon on white background */
+    color: var(--dark-text-color);
 }
 
 /* --- MOBILE SIDE MENU --- */
@@ -157,7 +166,7 @@ body.no-scroll {
     left: 0;
     width: 280px;
     height: 100%;
-    background: var(--dark-text-color); /* Dark background for mobile menu */
+    background: var(--dark-text-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 2rem 1.5rem;
     display: flex;
@@ -168,7 +177,7 @@ body.no-scroll {
     transition: transform 0.3s ease-out;
     overflow-y: auto;
     box-sizing: border-box;
-    color: #fff; /* Ensure text is visible on dark background */
+    color: #fff;
 }
 
 .side-menu.show {
@@ -176,7 +185,7 @@ body.no-scroll {
 }
 
 .side-menu a {
-    color: #eee; /* Lighter text on dark background */
+    color: #eee;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 0.75rem 0;
@@ -197,7 +206,7 @@ body.no-scroll {
     align-self: flex-end;
     cursor: pointer;
     margin-bottom: 1rem;
-    color: #fff; /* White icon on dark background */
+    color: #fff;
     transition: color 0.2s;
 }
 
@@ -207,11 +216,11 @@ body.no-scroll {
 
 /* --- HERO SECTION --- */
 .hero-section {
-    background-color: var(--page-bg-color); /* Now white */
-    padding: 2.5rem 2rem;
+    background-color: var(--page-bg-color);
+    padding: 2.5rem var(--content-horizontal-padding);
     max-width: var(--site-max-width);
     margin: 2rem auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Keep a subtle shadow for this section */
+    box-shadow: none;
     border-radius: 8px;
 }
 
@@ -247,7 +256,8 @@ body.no-scroll {
 .main-content-area {
     max-width: var(--site-max-width);
     margin: 2rem auto;
-    padding: 0 2rem;
+    padding: 0 var(--content-horizontal-padding);
+    box-sizing: border-box;
 }
 
 .intro-paragraph {
@@ -260,14 +270,17 @@ body.no-scroll {
     text-align: center;
 }
 
-/* Essays and Books sections (flush with body) */
+/* Essays and Books sections */
 .content-columns-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
+    gap: 0;
+    justify-content: center; /* Use center to keep columns grouped if they don't fill entire row */
     align-items: stretch;
     margin-bottom: 3rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    /* No explicit padding here, columns handle it */
 }
 
 .content-column {
@@ -275,16 +288,27 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* REMOVED card-like effects to make them flush with the body */
-    background: transparent; /* Makes background transparent */
-    padding: 0; /* Removes padding */
-    border-radius: 0; /* Removes border-radius */
-    box-shadow: none; /* Removes box-shadow */
+    background: transparent;
+    padding: 2rem var(--column-inner-horizontal-padding); /* Use new inner padding variable */
+    border-right: 1px solid var(--border-color);
+    border-radius: 0;
+    box-shadow: none;
     box-sizing: border-box;
+    text-align: left;
 }
 
+.content-column:last-child {
+    border-right: none;
+}
+
+/* Specific font size for "Essays" and "Books" headings */
 .content-column h2 {
+    font-size: 0.8rem; /* Very small */
+    font-weight: normal; /* Less prominent */
     color: var(--dark-text-color);
+    text-transform: uppercase; /* Optional: Make it uppercase for a small header look */
+    letter-spacing: 0.1em; /* Add some letter spacing */
+    margin-bottom: 1.5rem; /* Give some space below the small heading */
 }
 
 .content-column p {
@@ -292,12 +316,12 @@ body.no-scroll {
 }
 
 .foundations-section {
-    background-color: var(--page-bg-color); /* Now white */
-    padding: 2rem;
+    background-color: var(--page-bg-color);
+    padding: 2rem var(--content-horizontal-padding);
     text-align: center;
     border-radius: 8px;
     margin-bottom: 3rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Keep a subtle shadow for this section if desired */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .foundations-section h3 {
@@ -318,12 +342,14 @@ body.no-scroll {
     color: var(--dark-text-color);
     text-decoration: none;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
+/* Adjusted font size for titles to match George Soros examples */
 .featured-item-link h4 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 2.2rem; /* Adjusted to visually match Soros examples */
+    font-weight: 600;
+    line-height: 1.2; /* Adjusted line height for better readability at this size */
     margin-bottom: 0.3rem;
     color: var(--red-accent);
 }
@@ -340,6 +366,9 @@ body.no-scroll {
     color: var(--red-accent);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: left;
+    display: block;
+    margin-top: 1rem;
 }
 
 /* Scrollbar Styles */
@@ -363,20 +392,26 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Footer Styles */
 .site-footer {
-    background-color: var(--page-bg-color); /* Now white */
-    text-align: center;
-    padding: 2rem 2rem 1rem;
+    background-color: var(--page-bg-color);
+    padding: 2rem var(--content-horizontal-padding) 1rem;
     font-size: 0.95rem;
     color: var(--dark-text-color);
     border-top: none;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: var(--site-max-width);
-    margin: 0 auto;
+    width: 100%;
     gap: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -417,12 +452,18 @@ body::-webkit-scrollbar-thumb:hover {
 .footer-links {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    text-align: left;
+    width: 100%;
 }
 
 .footer-links a {
     color: var(--red-accent);
     text-decoration: none;
-    margin: 0 0.25rem;
+    margin-right: 0.5rem;
+}
+
+.footer-links a:last-child {
+    margin-right: 0;
 }
 
 .footer-links a:hover {
@@ -433,28 +474,30 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--light-grey-text);
     font-size: 0.85rem;
     margin-top: 1rem;
+    text-align: left;
+    width: 100%;
 }
 
 
-/* Featured essays/substack embed styles */
+/* Featured insights/substack embed styles */
 .substack-post-embed {
     max-width: 700px;
     margin: 2rem auto;
-    background: var(--page-bg-color); /* Now white */
-    padding: 1.5rem;
+    background: var(--page-bg-color);
+    padding: 1.5rem var(--content-horizontal-padding);
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Keep a subtle shadow */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .featured-essays {
-    background: var(--white-bg-card); /* Remains white, but could be set to transparent if needed */
-    padding: 1.75rem 2rem;
+    background: var(--featured-insights-bg);
+    padding: 1.75rem var(--content-horizontal-padding);
     margin: 2rem auto;
     max-width: var(--site-max-width);
-    border-radius: 12px;
+    border-radius: 0;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: none; /* Removed the box-shadow from the section itself for accent */
+    box-shadow: none;
 }
 
 .section-title {
@@ -475,27 +518,45 @@ body::-webkit-scrollbar-thumb:hover {
 
 .essay-grid {
     display: flex;
-    gap: 1.5rem;
+    gap: 0;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
 }
 
 .essay-card {
-    flex: 1 1 300px;
-    max-width: 360px;
-    padding: 1rem;
-    background: var(--white-bg-card); /* Remains white for individual cards */
-    border-radius: 20px;
-    border: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Keep subtle shadow for individual cards */
-    transition: transform 0.2s ease;
+    flex: 1 1 33%;
+    min-width: 250px;
+    padding: 1.2rem var(--column-inner-horizontal-padding);
+    background: transparent;
+    border-right: 1px solid var(--border-color);
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+    box-sizing: border-box;
+    text-align: left;
 }
 
-.essay-card:hover {
-    transform: translateY(-4px);
+/* Logic to remove borders for cleaner edges */
+.essay-grid .essay-card:nth-child(3n) {
+    border-right: none;
 }
+.essay-grid .essay-card:last-child {
+    border-right: none;
+}
+
+/* Specific handling for fewer than 3 items per row on wider screens if they don't fill perfectly */
+@media (min-width: 769px) {
+    .essay-grid:last-child > .essay-card:last-child:nth-child(2) {
+        border-right: none;
+    }
+    .essay-grid:last-child > .essay-card:last-child:nth-child(1) {
+        border-right: none;
+    }
+}
+
 
 .essay-card h3 {
     font-size: 1.1rem;
@@ -520,7 +581,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .essay-card a:hover h3 {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--red-accent);
 }
 
@@ -573,21 +634,68 @@ body::-webkit-scrollbar-thumb:hover {
         padding: 0 0.5rem;
     }
 
-    /* Content Columns Adjustment */
+    /* Content Columns Adjustment for Essays/Books */
     .content-columns-wrapper {
         flex-direction: column;
         align-items: center;
+        gap: 0;
+        border-top: none;
     }
 
     .content-column {
         flex: 1 1 100%;
-        max-width: 400px;
-        /* Re-add some padding for mobile columns now that they are flush */
-        padding: 1.5rem 0;
+        max-width: 400px; /* Still constrain mobile columns for readability */
+        padding: 1.5rem var(--column-inner-horizontal-padding);
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
+    }
+    .content-column:last-child {
+        border-bottom: none;
+    }
+
+    /* Mobile adjustments for "Essays" and "Books" headings */
+    .content-column h2 {
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Mobile adjustments for titles within Essays and Books sections */
+    .featured-item-link h4 {
+        font-size: 1.8rem; /* Adjusted for mobile to match Soros examples proportionally */
     }
 
 
+    /* Featured Essays Adjustments for mobile */
+    .featured-essays {
+        padding: 1rem var(--content-horizontal-padding);
+    }
+    .essay-grid {
+        flex-direction: column;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        padding: 0;
+    }
+    .essay-card {
+        flex: 1 1 100%;
+        max-width: none;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem var(--column-inner-horizontal-padding);
+        text-align: left;
+    }
+    .essay-card:last-child {
+        border-bottom: none;
+    }
+
     /* Footer Adjustments for mobile */
+    .site-footer {
+        max-width: 100%;
+        align-items: center;
+        padding: 2rem var(--content-horizontal-padding) 1rem;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -602,9 +710,23 @@ body::-webkit-scrollbar-thumb:hover {
     .footer-socials {
         justify-content: center;
     }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-copy {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Further adjust content padding for smaller screens if needed */
+    :root {
+        --content-horizontal-padding: 1.5rem;
+        --column-inner-horizontal-padding: 1rem;
+    }
+
     .site-name {
         font-size: 1.3rem;
     }
@@ -617,7 +739,6 @@ body::-webkit-scrollbar-thumb:hover {
         font-size: 1.0rem;
     }
 
-    /* This rule applies to the quote block on very small screens */
     .hero-quote-block {
         font-size: 1.2rem;
     }
