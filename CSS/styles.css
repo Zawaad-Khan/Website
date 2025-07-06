@@ -316,8 +316,8 @@ body.no-scroll {
     font-weight: normal; /* Less prominent */
     color: var(--dark-text-color);
     text-transform: uppercase; /* Optional: Make it uppercase for a small header look */
-    letter-spacing: 0.1em; /* Add some letter spacing */
-    margin-bottom: 1.5rem; /* Give some space below the small heading */
+    letter-spacing: 0em; /* Add some letter spacing */
+    margin-bottom: 0rem; /* Give some space below the small heading */
 }
 
 .content-column p {
@@ -780,7 +780,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 .content-column p strong {
-    font-size: 1.25rem; /* Increase as desired */
+    font-size: 1.2rem; /* Increase as desired */
     font-weight: 600;
     color: var(--red-accent); /* Optional: highlight the title */
     line-height: 1;
