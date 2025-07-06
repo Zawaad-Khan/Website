@@ -6,8 +6,8 @@
     --light-grey-text: #555555;
     --page-bg-color: #FFFFFF;
     --header-top-bar-bg: #FFFFFF;
-    --white-bg-card: #FFFFFF;
-    --featured-insights-bg: #F8F8F8;
+    --white-bg-card: #FFFFFF; /* This variable can be used for any white background card, like book/article cards */
+    --featured-insights-bg: #F8F8F8; /* Used for background of featured sections like articles list */
     --border-color: #D3D3D3; /* Greyish color for borders, a light grey */
     --content-horizontal-padding: 2rem; /* Consistent horizontal padding for main containers */
     --column-inner-horizontal-padding: 1.5rem; /* New variable for consistent inner padding of columns/cards */
@@ -15,7 +15,7 @@
 
 /* General Body & Typography */
 body {
-    font-family: 'Inter', sans-serif; /* Changed to Inter */
+    font-family: 'Inter', sans-serif;
     margin: 0;
     background: var(--page-bg-color);
     color: var(--dark-text-color);
@@ -23,16 +23,16 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif; /* Changed to Inter */
+    font-family: 'Inter', sans-serif;
     margin-top: 0;
-    margin-bottom: 0.5em; /* Consistent bottom margin for headings */
+    margin-bottom: 0.5em;
     color: var(--dark-text-color);
-    text-align: left; /* Ensure headings are left-aligned */
+    text-align: left;
 }
 
 p {
-    margin-bottom: 1em; /* Consistent bottom margin for paragraphs */
-    text-align: left; /* Ensure paragraphs are left-aligned */
+    margin-bottom: 1em;
+    text-align: left;
 }
 
 a {
@@ -73,7 +73,7 @@ body.no-scroll {
 }
 
 .site-name {
-    font-family: 'Inter', sans-serif; /* Changed to Inter */
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--dark-text-color);
@@ -112,18 +112,16 @@ body.no-scroll {
     margin: 0;
     display: flex;
     justify-content: flex-start;
-    /* We'll manage spacing with padding on list items now, not gap */
-    gap: 0; 
+    gap: 0;
 }
 
 .main-nav ul li {
-    /* Add padding to create space around the text within each button */
-    padding: 0 0.4rem; /* Adjust this value to control spacing from the line and other text */
-    border-right: 1px solid var(--border-color); /* Add a right border for separation */
+    padding: 0 0.4rem;
+    border-right: 1px solid var(--border-color);
 }
 
 .main-nav ul li:last-child {
-    border-right: none; /* Remove border from the last item */
+    border-right: none;
 }
 
 .main-nav ul li a {
@@ -131,10 +129,10 @@ body.no-scroll {
     font-size: 0.8rem;
     font-weight: 400;
     text-decoration: none;
-    padding: 0.2rem 0; /* Keep vertical padding for link hover effect */
+    padding: 0.2rem 0;
     text-transform: none;
     letter-spacing: 0.2px;
-    position: relative; /* Needed for the active/hover underline */
+    position: relative;
 }
 
 .main-nav ul li a:hover {
@@ -226,7 +224,7 @@ body.no-scroll {
     color: #ccc;
 }
 
-/* --- HERO SECTION (Adjusted for removal of quote) --- */
+/* --- HERO SECTION (for index.html) --- */
 .hero-section {
     background-color: var(--page-bg-color);
     padding: 2.5rem var(--content-horizontal-padding);
@@ -234,34 +232,10 @@ body.no-scroll {
     margin: 2rem auto;
     box-shadow: none;
     border-radius: 8px;
-    text-align: center; /* Center the intro paragraph if no quote */
-}
-
-/* Removing quote specific styles as the block is removed from HTML */
-/*
-.hero-section.hero-quote-only .hero-quote-block {
-    flex: 1 1 100%;
-    max-width: 700px;
     text-align: center;
 }
 
-.hero-quote-block blockquote {
-    font-size: 2rem;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    color: var(--dark-text-color);
-}
-
-.hero-quote-block footer {
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 1rem;
-    color: var(--light-grey-text);
-}
-*/
-
-/* --- MAIN CONTENT AREA --- */
+/* --- MAIN CONTENT AREA (Common container for all main page content) --- */
 .main-content-area {
     max-width: var(--site-max-width);
     margin: 2rem auto;
@@ -279,17 +253,16 @@ body.no-scroll {
     text-align: center;
 }
 
-/* Essays and Books sections */
+/* Essays and Books sections on the main index page */
 .content-columns-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    justify-content: center; /* Use center to keep columns grouped if they don't fill entire row */
+    justify-content: center;
     align-items: stretch;
     margin-bottom: 3rem;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    /* No explicit padding here, columns handle it */
 }
 
 .content-column {
@@ -298,7 +271,7 @@ body.no-scroll {
     flex-direction: column;
     justify-content: space-between;
     background: transparent;
-    padding: 2rem var(--column-inner-horizontal-padding); /* Use new inner padding variable */
+    padding: 2rem var(--column-inner-horizontal-padding);
     border-right: 1px solid var(--border-color);
     border-radius: 0;
     box-shadow: none;
@@ -310,18 +283,25 @@ body.no-scroll {
     border-right: none;
 }
 
-/* Specific font size for "Essays" and "Books" headings */
+/* Specific font size for "Essays" and "Books" headings on index page columns */
 .content-column h2 {
-    font-size: 0.8rem; /* Very small */
-    font-weight: normal; /* Less prominent */
+    font-size: 0.8rem;
+    font-weight: normal;
     color: var(--dark-text-color);
-    text-transform: uppercase; /* Optional: Make it uppercase for a small header look */
-    letter-spacing: 0em; /* Add some letter spacing */
-    margin-bottom: 0rem; /* Give some space below the small heading */
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    margin-bottom: 0rem;
 }
 
 .content-column p {
     color: var(--dark-text-color);
+}
+
+.content-column p strong {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--red-accent);
+    line-height: 1;
 }
 
 .foundations-section {
@@ -356,9 +336,9 @@ body.no-scroll {
 
 /* Adjusted font size for titles to match George Soros examples */
 .featured-item-link h4 {
-    font-size: 2.2rem; /* Adjusted to visually match Soros examples */
+    font-size: 2.2rem;
     font-weight: 600;
-    line-height: 1.2; /* Adjusted line height for better readability at this size */
+    line-height: 1.2;
     margin-bottom: 0.3rem;
     color: var(--red-accent);
 }
@@ -379,6 +359,332 @@ body.no-scroll {
     display: block;
     margin-top: 1rem;
 }
+
+/* Featured articles/substack embed styles (can be used on index.html and articles.html) */
+.substack-post-embed {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: var(--page-bg-color);
+    padding: 1.5rem var(--content-horizontal-padding);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.featured-essays { /* This is a wrapper for a grid of essays/articles, possibly featured on index.html */
+    background: var(--featured-insights-bg);
+    padding: 1.75rem var(--content-horizontal-padding);
+    margin: 2rem auto;
+    max-width: var(--site-max-width);
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.section-title { /* Generic title for various content sections */
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--dark-text-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.section-desc { /* Generic description for various content sections */
+    text-align: center;
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 2rem;
+}
+
+.essay-grid { /* Grid for essay cards, possibly on index.html */
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+}
+
+.essay-card {
+    flex: 1 1 33%;
+    min-width: 250px;
+    padding: 1.2rem var(--column-inner-horizontal-padding);
+    background: transparent;
+    border-right: 1px solid var(--border-color);
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Logic to remove borders for cleaner edges for essay grid */
+.essay-grid .essay-card:nth-child(3n) {
+    border-right: none;
+}
+.essay-grid .essay-card:last-child {
+    border-right: none;
+}
+
+/* Specific handling for fewer than 3 items per row on wider screens if they don't fill perfectly */
+@media (min-width: 769px) {
+    .essay-grid:last-child > .essay-card:last-child:nth-child(2) {
+        border-right: none;
+    }
+    .essay-grid:last-child > .essay-card:last-child:nth-child(1) {
+        border-right: none;
+    }
+}
+
+.essay-card h3 {
+    font-size: 1.1rem;
+    color: var(--red-accent);
+    margin: 0 0 0.5rem;
+}
+
+.essay-card p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    color: #444;
+}
+
+.essay-date {
+    font-style: italic;
+    color: var(--light-grey-text);
+}
+
+.essay-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.essay-card a:hover h3 {
+    text-decoration: underline;
+    color: var(--red-accent);
+}
+
+/* --- PAGE SPECIFIC SECTIONS (for Books & Articles Pages) --- */
+
+/* Hero section for dedicated content pages like books.html or articles.html */
+.page-hero-section {
+    background-color: var(--page-bg-color); /* Uses your --page-bg-color */
+    padding: 3rem 0 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--red-accent);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.page-intro {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--dark-text-color);
+    text-align: center;
+}
+
+/* General wrapper for content blocks on dedicated pages */
+.content-section {
+    margin-bottom: 0;
+    padding: 2.5rem 0;
+    box-sizing: border-box;
+}
+
+/* Specific background for the articles list section */
+.content-section.articles-list {
+    background-color: var(--featured-insights-bg);
+}
+
+/* Specific background for the books list section */
+.content-section.books-list {
+    background-color: var(--page-bg-color);
+}
+
+/* Heading for content sections on dedicated pages */
+.section-heading-page { /* Renamed to avoid conflict with generic .section-title */
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-text-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.section-heading-page::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--red-accent);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Articles Grid (for articles.html) */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem var(--content-horizontal-padding);
+}
+
+.article-card {
+    background-color: var(--white-bg-card); /* Using a more descriptive variable */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-card a {
+    color: var(--dark-text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.article-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--red-accent);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.article-card h3:hover {
+    text-decoration: underline;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: var(--light-grey-text);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.article-summary {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+    flex-grow: 1;
+}
+
+/* Books Grid (for books.html) */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem var(--content-horizontal-padding);
+}
+
+.book-card {
+    background-color: var(--white-bg-card); /* Using a more descriptive variable */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.book-card a {
+    color: var(--dark-text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.book-card img {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.book-card h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--red-accent);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.book-card h3:hover {
+    text-decoration: underline;
+}
+
+.book-meta {
+    font-size: 0.9rem;
+    color: var(--light-grey-text);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.book-summary {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.view-all-link-container {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 var(--content-horizontal-padding);
+}
+
+.view-all-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--red-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--red-accent);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-all-link:hover {
+    background-color: var(--red-accent);
+    color: var(--page-bg-color);
+    text-decoration: none;
+}
+
 
 /* Scrollbar Styles */
 body::-webkit-scrollbar {
@@ -406,11 +712,11 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 0.95rem;
     color: var(--dark-text-color);
     border-top: none;
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+
     max-width: var(--site-max-width);
     margin: 0 auto;
     box-sizing: border-box;
@@ -487,113 +793,6 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
 }
 
-
-/* Featured insights/substack embed styles */
-.substack-post-embed {
-    max-width: 700px;
-    margin: 2rem auto;
-    background: var(--page-bg-color);
-    padding: 1.5rem var(--content-horizontal-padding);
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.featured-essays {
-    background: var(--featured-insights-bg);
-    padding: 1.75rem var(--content-horizontal-padding);
-    margin: 2rem auto;
-    max-width: var(--site-max-width);
-    border-radius: 0;
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: none;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 1.25rem;
-    color: var(--dark-text-color);
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.section-desc {
-    text-align: center;
-    font-size: 1rem;
-    color: #222;
-    margin-bottom: 2rem;
-}
-
-.essay-grid {
-    display: flex;
-    gap: 0;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 0;
-}
-
-.essay-card {
-    flex: 1 1 33%;
-    min-width: 250px;
-    padding: 1.2rem var(--column-inner-horizontal-padding);
-    background: transparent;
-    border-right: 1px solid var(--border-color);
-    border-radius: 0;
-    box-shadow: none;
-    transition: none;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-/* Logic to remove borders for cleaner edges */
-.essay-grid .essay-card:nth-child(3n) {
-    border-right: none;
-}
-.essay-grid .essay-card:last-child {
-    border-right: none;
-}
-
-/* Specific handling for fewer than 3 items per row on wider screens if they don't fill perfectly */
-@media (min-width: 769px) {
-    .essay-grid:last-child > .essay-card:last-child:nth-child(2) {
-        border-right: none;
-    }
-    .essay-grid:last-child > .essay-card:last-child:nth-child(1) {
-        border-right: none;
-    }
-}
-
-
-.essay-card h3 {
-    font-size: 1.1rem;
-    color: var(--red-accent);
-    margin: 0 0 0.5rem;
-}
-
-.essay-card p {
-    font-size: 0.9rem;
-    margin: 0.25rem 0;
-    color: #444;
-}
-
-.essay-date {
-    font-style: italic;
-    color: var(--light-grey-text);
-}
-
-.essay-card a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.essay-card a:hover h3 {
-    text-decoration: underline;
-    color: var(--red-accent);
-}
-
 /* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
     /* Hide desktop-specific elements */
@@ -623,7 +822,7 @@ body::-webkit-scrollbar-thumb:hover {
         display: block;
         margin-left: 1rem;
     }
-    
+
     /* Ensure mobile-only button within side menu looks good */
     .side-menu .topbar-btn.mobile-only {
         display: block;
@@ -635,18 +834,7 @@ body::-webkit-scrollbar-thumb:hover {
         gap: 1.5rem;
     }
 
-    /* Removing quote specific styles for mobile as the block is removed from HTML */
-    /*
-    .hero-section.hero-quote-only .hero-quote-block {
-        max-width: 100%;
-        flex: 1 1 auto;
-        text-align: center;
-        font-size: 1.4rem;
-        padding: 0 0.5rem;
-    }
-    */
-
-    /* Content Columns Adjustment for Essays/Books */
+    /* Content Columns Adjustment for Essays/Books (on index.html) */
     .content-columns-wrapper {
         flex-direction: column;
         align-items: center;
@@ -656,7 +844,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     .content-column {
         flex: 1 1 100%;
-        max-width: 400px; /* Still constrain mobile columns for readability */
+        max-width: 400px;
         padding: 1.5rem var(--column-inner-horizontal-padding);
         border-right: none;
         border-bottom: 1px solid var(--border-color);
@@ -666,19 +854,18 @@ body::-webkit-scrollbar-thumb:hover {
         border-bottom: none;
     }
 
-    /* Mobile adjustments for "Essays" and "Books" headings */
+    /* Mobile adjustments for "Essays" and "Books" headings on index page */
     .content-column h2 {
         font-size: 0.7rem;
         margin-bottom: 1rem;
     }
 
-    /* Mobile adjustments for titles within Essays and Books sections */
+    /* Mobile adjustments for titles within Essays and Books sections on index page */
     .featured-item-link h4 {
-        font-size: 1.8rem; /* Adjusted for mobile to match Soros examples proportionally */
+        font-size: 1.8rem;
     }
 
-
-    /* Featured Essays Adjustments for mobile */
+    /* Featured Essays Adjustments for mobile (on index.html) */
     .featured-essays {
         padding: 1rem var(--content-horizontal-padding);
     }
@@ -700,6 +887,51 @@ body::-webkit-scrollbar-thumb:hover {
     .essay-card:last-child {
         border-bottom: none;
     }
+
+    /* Page specific mobile adjustments (for books.html, articles.html) */
+    .page-hero-section,
+    .content-section {
+        padding: 1.5rem 0;
+    }
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .page-intro {
+        font-size: 1rem;
+    }
+
+    .section-heading-page {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .articles-grid,
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-left: var(--content-horizontal-padding);
+        padding-right: var(--content-horizontal-padding);
+    }
+
+    .article-card,
+    .book-card {
+        padding: 1.2rem;
+    }
+
+    .book-card img {
+        max-width: 120px;
+    }
+
+    .view-all-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .view-all-link-container {
+        padding: 0 var(--content-horizontal-padding);
+    }
+
 
     /* Footer Adjustments for mobile */
     .site-footer {
@@ -751,15 +983,16 @@ body::-webkit-scrollbar-thumb:hover {
         font-size: 1.0rem;
     }
 
-    /* Removed quote section, so no specific styles needed for it here */
-    /*
-    .hero-quote-block {
-        font-size: 1.2rem;
-    }
-    */
-    
     .intro-paragraph {
         font-size: 1rem;
+    }
+
+    /* Further adjust page titles for smaller mobile screens */
+    .page-title {
+        font-size: 1.8rem;
+    }
+    .section-heading-page {
+        font-size: 1.3rem;
     }
 }
 
@@ -776,12 +1009,18 @@ body::-webkit-scrollbar-thumb:hover {
         display: none !important;
     }
     .mobile-only {
-        display: flex !important;
+        display: flex !important; /* Use flex for menu toggle etc. */
     }
 }
-.content-column p strong {
-    font-size: 1.2rem; /* Increase as desired */
-    font-weight: 600;
-    color: var(--red-accent); /* Optional: highlight the title */
-    line-height: 1;
+/* In styles.css */
+.about-text-content {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    text-align: left;
+}
+.about-text-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Example style for images in about section */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
