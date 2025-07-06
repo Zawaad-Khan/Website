@@ -112,7 +112,18 @@ body.no-scroll {
     margin: 0;
     display: flex;
     justify-content: flex-start;
-    gap: 1.2rem;
+    /* We'll manage spacing with padding on list items now, not gap */
+    gap: 0; 
+}
+
+.main-nav ul li {
+    /* Add padding to create space around the text within each button */
+    padding: 0 0.4rem; /* Adjust this value to control spacing from the line and other text */
+    border-right: 1px solid var(--border-color); /* Add a right border for separation */
+}
+
+.main-nav ul li:last-child {
+    border-right: none; /* Remove border from the last item */
 }
 
 .main-nav ul li a {
@@ -120,9 +131,10 @@ body.no-scroll {
     font-size: 0.8rem;
     font-weight: 400;
     text-decoration: none;
-    padding: 0.2rem 0;
+    padding: 0.2rem 0; /* Keep vertical padding for link hover effect */
     text-transform: none;
     letter-spacing: 0.2px;
+    position: relative; /* Needed for the active/hover underline */
 }
 
 .main-nav ul li a:hover {
@@ -766,4 +778,10 @@ body::-webkit-scrollbar-thumb:hover {
     .mobile-only {
         display: flex !important;
     }
+}
+.content-column p strong {
+    font-size: 1.25rem; /* Increase as desired */
+    font-weight: 600;
+    color: var(--red-accent); /* Optional: highlight the title */
+    line-height: 1;
 }
