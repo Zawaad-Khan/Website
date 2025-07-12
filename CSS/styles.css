@@ -1024,3 +1024,9 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 8px; /* Example style for images in about section */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.about-text-content {
+  background-color: var(--featured-insights-bg);
+  padding: 2rem var(--content-horizontal-padding);
+  border-radius: 0;
+  box-sizing: border-box;
+}
